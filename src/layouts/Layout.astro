@@ -1,0 +1,41 @@
+---
+export interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+const siteOwner = "Artisanal Threads: Woven with Heart";
+const pageTitle = title ? `${title} | ${siteOwner}` : siteOwner;
+---
+<!html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-background dark:bg-slate-900 text-slate-800 dark:text-slate-200 antialiased">
+    <header class="py-4 px-2 md:px-6 bg-white dark:bg-slate-800 shadow-md sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-primary dark:text-primary hover:opacity-80 transition-opacity">{siteOwner}</a>
+        <nav class="space-x-4">
+          <a href="/" class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Home</a>
+          <a href="/products" class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Products</a>
+          <a href="/artisans" class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Artisans</a>
+          <a href="/blog/" class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Blog</a>
+          <a href="/about" class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">About Us</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container mx-auto p-4 md:p-6 min-h-[calc(100vh-150px)]">
+      <slot />
+    </main>
+    <footer class="bg-white dark:bg-slate-800 py-8 border-t border-slate-200 dark:border-slate-700">
+      <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-center text-sm text-slate-500 dark:text-slate-400">&copy; {new Date().getFullYear()} {siteOwner}. All rights reserved.</p>
+        <div class="mt-4 md:mt-0 flex space-x-4">
+          <a href="#" class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Terms of Service</a>
+          <a href="#" class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Home - Artisanal Threads: Woven with Heart" description="Discover unique, handcrafted goods from artisans around the globe.  Supporting ethical sourcing and sustainable practices. Join our community!">
+  <section class="py-12 md:py-20 text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-secondary">Welcome to Artisanal Threads Market</h1>
+      <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+        Discover ethically sourced, handcrafted clothing, textiles, and accessories from artisans around the globe. We connect conscious consumers with unique, high-quality goods, supporting sustainable practices and artisan communities. Join our community!
+      </p>
+      <img src="https://placehold.co/1200x600.png" alt="Handcrafted textiles and clothing" class="rounded-lg shadow-xl mx-auto mb-12" data-ai-hint="handcrafted textiles clothing" />
+
+      <div class="flex justify-center space-x-4">
+        <a href="/products" class="bg-primary text-white py-3 px-6 rounded-full hover:bg-secondary transition-colors">Explore Our Products</a>
+        <a href="/artisans" class="border-2 border-primary text-primary py-3 px-6 rounded-full hover:bg-accent hover:border-accent hover:text-white transition-colors">Meet Our Artisans</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-20 bg-background">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-secondary">Featured Products</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://placehold.co/400x300.png" alt="Product 1" class="w-full h-48 object-cover" data-ai-hint="woven scarf"/>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2 text-secondary">Handwoven Scarf</h3>
+            <p class="text-gray-600">Beautifully handwoven scarf made with natural dyes.</p>
+            <a href="#" class="text-primary hover:underline">Learn More</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://placehold.co/400x300.png" alt="Product 2" class="w-full h-48 object-cover" data-ai-hint="embroidered bag"/>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2 text-secondary">Embroidered Shoulder Bag</h3>
+            <p class="text-gray-600">Unique embroidered bag crafted by skilled artisans.</p>
+            <a href="#" class="text-primary hover:underline">Learn More</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://placehold.co/400x300.png" alt="Product 3" class="w-full h-48 object-cover" data-ai-hint="hand-knitted sweater"/>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2 text-secondary">Hand-Knitted Wool Sweater</h3>
+            <p class="text-gray-600">Cozy and warm hand-knitted sweater made with sustainable wool.</p>
+            <a href="#" class="text-primary hover:underline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
